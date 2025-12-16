@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
   { href: "#experience", label: "Experience" },
@@ -32,6 +33,7 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -58,6 +60,9 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <div className="pt-2">
+              <ThemeToggle />
+            </div>
           </div>
         )}
       </div>
