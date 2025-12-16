@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -15,12 +15,18 @@ const Hero = () => {
           B.S. Data Science student at IIT Madras, passionate about building 
           intelligent systems with ML/DL, RAG pipelines, and scalable backend architectures.
         </p>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-4 flex-wrap">
           <Button variant="default" size="lg" asChild>
             <a href="#projects">View Projects</a>
           </Button>
           <Button variant="outline" size="lg" asChild>
             <a href="#contact">Contact Me</a>
+          </Button>
+          <Button variant="secondary" size="lg" asChild>
+            <a href="/resume.pdf" download>
+              <Download className="mr-2 h-4 w-4" />
+              Resume
+            </a>
           </Button>
         </div>
         <div className="flex items-center justify-center gap-6 mt-8">
