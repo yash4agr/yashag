@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { Github, Linkedin, Mail, Download, Link2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -41,6 +41,10 @@ const Hero = () => {
           <a href="mailto:your@email.com"
              className="text-muted-foreground hover:text-foreground transition-colors">
             <Mail size={24} />
+          </a>
+          <a href="https://peerlist.io/yash4agr" target="_blank" rel="noopener noreferrer"
+             className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link2 size={24} />
           </a>
         </div>
       </div>

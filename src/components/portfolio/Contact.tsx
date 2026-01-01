@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, Link2 } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -27,6 +27,12 @@ const Contact = () => {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <Linkedin size={18} className="mr-2" />
               LinkedIn
+            </a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href="https://peerlist.io/yash4agr" target="_blank" rel="noopener noreferrer">
+              <Link2 size={18} className="mr-2" />
+              Peerlist
             </a>
           </Button>
         </div>
