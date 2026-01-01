@@ -17,15 +17,15 @@ const Hero = () => {
         </p>
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <Button variant="default" size="lg" asChild>
+            <a href="#projects">View Projects</a>
+          </Button>
+          <Button variant="outline" size="lg" asChild>
             <a href="/resume.pdf" download>
               <Download className="mr-2 h-4 w-4" />
               Resume
             </a>
           </Button>
-          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
-            <a href="#projects">View Projects</a>
-          </Button>
-          <Button variant="secondary" size="lg" asChild>
+          <Button variant="outline" size="lg" asChild>
             <a href="#contact">Contact Me</a>
           </Button>
         </div>
