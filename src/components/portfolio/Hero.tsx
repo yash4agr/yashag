@@ -29,22 +29,22 @@ const Hero = () => {
             <a href="#contact">Contact Me</a>
           </Button>
         </div>
-        <div className="flex items-center justify-center gap-6 mt-8">
+        <div className="flex items-center justify-center gap-5 mt-8">
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
              className="text-muted-foreground hover:text-foreground transition-colors">
-            <Github size={24} />
+            <Github size={20} />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
              className="text-muted-foreground hover:text-foreground transition-colors">
-            <Linkedin size={24} />
+            <Linkedin size={20} />
           </a>
           <a href="mailto:your@email.com"
              className="text-muted-foreground hover:text-foreground transition-colors">
-            <Mail size={24} />
+            <Mail size={20} />
           </a>
           <a href="https://peerlist.io/yash4agr" target="_blank" rel="noopener noreferrer"
              className="text-muted-foreground hover:text-foreground transition-colors">
-            <Link2 size={24} />
+            <Link2 size={20} />
           </a>
         </div>
       </div>
