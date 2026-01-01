@@ -54,13 +54,6 @@ const Hero = () => {
               </a>
             );
           })}
-          <a
-            href={`mailto:${personalInfo.email}`}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-            aria-label="Email"
-          >
-            <Mail size={24} />
-          </a>
         </div>
       </div>
     </section>
