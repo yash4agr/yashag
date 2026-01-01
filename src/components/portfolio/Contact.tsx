@@ -1,5 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, Link2 } from "lucide-react";
+import { Mail, Github, Linkedin, Link2, BookOpen, LucideIcon } from "lucide-react";
+import { personalInfo, socialLinks } from "@/data/portfolio";
+
+const iconMap: Record<string, LucideIcon> = {
+  github: Github,
+  linkedin: Linkedin,
+  mail: Mail,
+  peerlist: Link2,
+  substack: BookOpen,
+  twitter: Link2,
+};
 
 const Contact = () => {
   return (
@@ -12,29 +22,23 @@ const Contact = () => {
         </p>
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <Button asChild>
-            <a href="mailto:your@email.com">
+            <a href={`mailto:${personalInfo.email}`}>
               <Mail size={18} className="mr-2" />
               Send Email
             </a>
           </Button>
-          <Button variant="outline" asChild>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-              <Github size={18} className="mr-2" />
-              GitHub
-            </a>
-          </Button>
-          <Button variant="outline" asChild>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <Linkedin size={18} className="mr-2" />
-              LinkedIn
-            </a>
-          </Button>
-          <Button variant="outline" asChild>
-            <a href="https://peerlist.io/yash4agr" target="_blank" rel="noopener noreferrer">
-              <Link2 size={18} className="mr-2" />
-              Peerlist
-            </a>
-          </Button>
+          {socialLinks.map((link) => {
+            const Icon = iconMap[link.icon];
+            if (!Icon || link.icon === "mail") return null;
+            return (
+              <Button key={link.platform} variant="outline" asChild>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  <Icon size={18} className="mr-2" />
+                  {link.platform}
+                </a>
+              </Button>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { GraduationCap } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { education } from "@/data/portfolio";
 
 const Education = () => {
   return (
@@ -13,19 +14,23 @@ const Education = () => {
                 <GraduationCap className="text-primary" size={24} />
               </div>
               <div className="flex-1">
-                <CardTitle className="text-xl">Indian Institute of Technology, Madras</CardTitle>
-                <p className="text-muted-foreground">B.S. Data Science and Application</p>
-                <p className="text-sm text-muted-foreground mt-1">2022 – 2026 | GPA: 8.89/10.0</p>
+                <CardTitle className="text-xl">{education.institution}</CardTitle>
+                <p className="text-muted-foreground">{education.degree}</p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {education.period}
+                  {education.gpa && ` | GPA: ${education.gpa}`}
+                </p>
               </div>
             </div>
           </CardHeader>
-          <CardContent>
-            <p className="text-sm font-medium mb-3 text-foreground">Relevant Coursework:</p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              AI, Deep Learning, Machine Learning Techniques, Tools in Data Science, Programming, 
-              Data Structures & Algorithms, System Commands, Linear Algebra, Probability & Statistics
-            </p>
-          </CardContent>
+          {education.coursework && education.coursework.length > 0 && (
+            <CardContent>
+              <p className="text-sm font-medium mb-3 text-foreground">Relevant Coursework:</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {education.coursework.join(", ")}
+              </p>
+            </CardContent>
+          )}
         </Card>
       </div>
     </section>

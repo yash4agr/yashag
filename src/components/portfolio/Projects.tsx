@@ -1,42 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
-
-const projects = [
-  {
-    title: "Psych-LLM",
-    description: "RAG pipeline using ChromaDB and meta-llama for psychology research assistance",
-    tech: ["Python", "ChromaDB", "meta-llama", "pdfplumber"],
-    date: "Feb 2025",
-    highlights: [
-      "90% relevant document retrieval accuracy",
-      "25% reduction in processing time",
-      "LLM-based answer generation with source attribution"
-    ]
-  },
-  {
-    title: "Home Service Platform",
-    description: "Full-stack service marketplace with role-based access and real-time dashboards",
-    tech: ["Vue.js", "Flask", "Redis", "Celery", "Docker"],
-    date: "Oct – Nov 2024",
-    highlights: [
-      "25% API response time improvement via Redis caching",
-      "Automated service monitoring with Celery",
-      "Containerized deployment with Docker Compose"
-    ]
-  },
-  {
-    title: "TuneIn - Music Streaming",
-    description: "Web application for streaming music with secure authentication",
-    tech: ["Python", "Flask", "SQLAlchemy", "HTML/CSS"],
-    date: "Oct – Dec 2023",
-    highlights: [
-      "Secure user authentication system",
-      "20% reduction in login issues",
-      "Full frontend-backend integration"
-    ]
-  }
-];
+import { projects } from "@/data/portfolio";
 
 const Projects = () => {
   return (
@@ -53,8 +18,26 @@ const Projects = () => {
                     <CardDescription className="text-xs mt-1">{project.date}</CardDescription>
                   </div>
                   <div className="flex gap-2">
-                    <Github size={18} className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors" />
-                    <ExternalLink size={18} className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors" />
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} GitHub repository`}
+                      >
+                        <Github size={18} className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors" />
+                      </a>
+                    )}
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} live demo`}
+                      >
+                        <ExternalLink size={18} className="text-muted-foreground hover:text-foreground cursor-pointer transition-colors" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </CardHeader>
