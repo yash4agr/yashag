@@ -6,6 +6,7 @@ import Skills from "@/components/portfolio/Skills";
 import Education from "@/components/portfolio/Education";
 import Blog from "@/components/portfolio/Blog";
 import Contact from "@/components/portfolio/Contact";
+import { personalInfo } from "@/data/portfolio";
 
 const Index = () => {
   return (
@@ -19,7 +20,7 @@ const Index = () => {
       <Blog />
       <Contact />
       <footer className="py-8 text-center text-sm text-muted-foreground border-t border-border/50">
-        © {new Date().getFullYear()} Your Name. All rights reserved.
+        © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
       </footer>
     </div>
   );
