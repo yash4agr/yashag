@@ -2,15 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-
-const navLinks = [
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#education", label: "Education" },
-  { href: "#blog", label: "Blog" },
-  { href: "#contact", label: "Contact" },
-];
+import { personalInfo, navLinks } from "@/data/portfolio";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +12,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="font-bold text-lg">
-            Portfolio
+            {personalInfo.name}
           </a>
           
           {/* Desktop Nav */}

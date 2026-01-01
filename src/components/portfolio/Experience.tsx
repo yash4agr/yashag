@@ -1,28 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
-const experiences = [
-  {
-    title: "Software Development Intern",
-    company: "UniteCare Software Solutions",
-    period: "Sep – Oct 2025",
-    points: [
-      "Accelerated physician review by delivering AI-generated clinical summaries from unstructured patient visit notes.",
-      "Scaled an asynchronous system on Azure Container Apps to process over 10,000 PDFs daily.",
-      "Achieved over 95% test name accuracy for lab trend plotting by architecting a hybrid normalization service."
-    ]
-  },
-  {
-    title: "Freelance Developer",
-    company: "EVD Technology",
-    period: "July 2024",
-    points: [
-      "Enhanced FBRef web scraping, boosting data reliability by 80% for player/team stats.",
-      "Streamlined data ingestion using ChatGPT and PostgreSQL to enable natural language–driven session planning.",
-      "Integrated Dockerized frontend, API, and action servers on AWS EC2, reducing deployment time by 50%."
-    ]
-  }
-];
+import { experiences } from "@/data/portfolio";
 
 const Experience = () => {
   return (
