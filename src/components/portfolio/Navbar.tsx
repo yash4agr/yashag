@@ -11,8 +11,10 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="font-bold text-lg">
-            {personalInfo.name}
+          <a href="#" 
+          className="font-magic text-5xl md:text-5xl tracking-wider text-foreground hover:transition-colors transition-all drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]"
+          >
+            {personalInfo.name.slice(0, 4)}
           </a>
           
           {/* Desktop Nav */}

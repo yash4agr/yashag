@@ -24,20 +24,48 @@ const Hero = () => {
         <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           {personalInfo.tagline}
         </p>
+
+        {/* Buttons Section */}
         <div className="flex items-center justify-center gap-4 flex-wrap">
-          <Button variant="default" size="lg" asChild>
-            <a href={personalInfo.resumeUrl} download>
+          
+          {/* RESUME BUTTON: Fixed external link and added styling for readability */}
+          <Button 
+            variant="default" 
+            size="lg" 
+            asChild
+            // Added font-semibold. If text is still hard to read, add "text-white" or "text-black" here.
+            className="font-semibold" 
+          >
+            <a
+              href={personalInfo.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Download className="mr-2 h-4 w-4" />
               Resume
             </a>
           </Button>
-          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold" 
+            asChild
+          >
             <a href="#projects">View Projects</a>
           </Button>
-          <Button variant="secondary" size="lg" asChild>
+
+          <Button 
+            variant="secondary" 
+            size="lg" 
+            className="font-semibold border border-gray-300 bg-gray-100 hover:bg-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" 
+            asChild
+            >
             <a href="#contact">Contact Me</a>
           </Button>
         </div>
+
+        {/* Social Icons */}
         <div className="flex items-center justify-center gap-6 mt-8">
           {socialLinks.map((link) => {
             const Icon = iconMap[link.icon];
@@ -54,6 +82,13 @@ const Hero = () => {
               </a>
             );
           })}
+          <a
+            href={`mailto:${personalInfo.email}`}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Email"
+          >
+            <Mail size={24} />
+          </a>
         </div>
       </div>
     </section>

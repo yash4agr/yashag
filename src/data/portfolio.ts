@@ -1,5 +1,5 @@
 // ============================================
-// PORTFOLIO DATA - Edit this file to update your portfolio
+// PORTFOLIO DATA - Edit this file to update portfolio
 // ============================================
 
 export interface SocialLink {
@@ -45,8 +45,8 @@ export const personalInfo = {
   name: "Yash Agrawal",
   title: "AI/ML Engineer",
   tagline: "B.S. Data Science student at IIT Madras, passionate about building intelligent systems with ML/DL, RAG pipelines, and scalable backend architectures.",
-  email: "your@email.com", // Update with your email
-  resumeUrl: "/resume.pdf",
+  email: "yash4agr@gmail.com",
+  resumeUrl: "/resume/Yash_s_Resume.pdf",
 };
 
 // ============================================
@@ -55,12 +55,12 @@ export const personalInfo = {
 export const socialLinks: SocialLink[] = [
   {
     platform: "GitHub",
-    url: "https://github.com/yash4agr", // Update with your GitHub
+    url: "https://github.com/yash4agr",
     icon: "github",
   },
   {
     platform: "LinkedIn",
-    url: "https://linkedin.com/in/yash4agr", // Update with your LinkedIn
+    url: "https://linkedin.com/in/yash4agr",
     icon: "linkedin",
   },
   {
@@ -70,7 +70,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     platform: "Substack",
-    url: "https://substack.com/@yash4agr", // Update with your Substack
+    url: "https://substack.com/@yash4agr",
     icon: "substack",
   },
 ];
@@ -196,7 +196,7 @@ export const education: Education = {
 // ============================================
 export const blogConfig = {
   enabled: false, // Set to true when you have blog posts
-  substackUrl: "https://substack.com/@yash4agr", // Update with your Substack
+  substackUrl: "https://substack.com/@yash4agr",
   description: "I'll be sharing insights on AI/ML, data science, and my journey in tech. Stay tuned for articles on RAG pipelines, ML engineering, and more.",
 };
 
