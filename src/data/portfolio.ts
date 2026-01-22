@@ -106,6 +106,26 @@ export const experiences: Experience[] = [
 // ============================================
 export const projects: Project[] = [
   {
+    title: "VCNI - Voice Command Neural Interface",
+    description:
+      "Cloud-native conversational AI system with joint NLU and agentic reasoning for voice-controlled assistance",
+    tech: [
+      "PyTorch",
+      "Transformers",
+      "NLU Systems",
+      "LLM Agents",
+      "Event-driven MaaS"
+    ],
+    date: "Jan 2025",
+    highlights: [
+      "94% intent accuracy with fine-tuned XLM-R joint model",
+      "Event-driven, serverless ML inference deployed on Modal",
+      "Multi-turn dialogue management with slot-filling and context tracking",
+    ],
+    githubUrl: "https://github.com/yash4agr/vcni",
+    liveUrl: "https://vcni.yashag.dev",
+  },
+  {
     title: "Psych-LLM",
     description: "RAG pipeline using ChromaDB and meta-llama for psychology research assistance",
     tech: ["Python", "ChromaDB", "meta-llama", "pdfplumber"],
@@ -115,7 +135,7 @@ export const projects: Project[] = [
       "25% reduction in processing time",
       "LLM-based answer generation with source attribution",
     ],
-    githubUrl: "https://github.com/yash4agr", // Update with actual repo
+    githubUrl: "https://github.com/yash4agr/Psych-LLM", 
     // liveUrl: "https://example.com", // Add if available
   },
   {
@@ -128,7 +148,7 @@ export const projects: Project[] = [
       "Automated service monitoring with Celery",
       "Containerized deployment with Docker Compose",
     ],
-    githubUrl: "https://github.com/yash4agr", // Update with actual repo
+    githubUrl: "https://github.com/yash4agr/Home-Service",
   },
   {
     title: "TuneIn - Music Streaming",
@@ -140,7 +160,7 @@ export const projects: Project[] = [
       "20% reduction in login issues",
       "Full frontend-backend integration",
     ],
-    githubUrl: "https://github.com/yash4agr", // Update with actual repo
+    githubUrl: "https://github.com/yash4agr/MusicStreamingApp",
   },
 ];
 
